@@ -67,6 +67,12 @@
      state: started
      enabled: yes
 
+- name: Create docker config directory
+  file:
+     path: /etc/systemd/system/docker.service.d
+     state: directory
+     recurse: yes
+
 - name: Update docker proxy config
   copy:
      src: http-proxy.conf
