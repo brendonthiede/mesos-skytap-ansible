@@ -56,6 +56,23 @@
      name: /tmp/mesosphere-el-repo-7-1.noarch.rpm
      state: present
 
+- name: Install docker
+  yum:
+     name: docker
+     state: installed
+
+- name: Start docker service
+  service:
+     name: docker
+     state: started
+     enabled: yes
+
+- name: Update docker proxy config
+  copy:
+     src: http-proxy.conf
+     dest: /etc/systemd/system/docker.service.d/http-proxy.conf
+  notify: "restart docker"
+
 - name: Install mesos
   yum:
      name: mesos
