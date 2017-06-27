@@ -37,4 +37,4 @@
 - name: Install marathon-lb
   git:
     repo: 'git clone https://github.com/mesosphere/marathon-lb.git'
-    dest: /opt
+    dest: /opt/marathon-lb
