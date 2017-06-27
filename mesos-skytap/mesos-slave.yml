@@ -1,0 +1,7 @@
+---
+- name: Add slaves to Mesos cluster
+  hosts: mesos-slave
+  remote_user: root
+
+  roles:
+    - common

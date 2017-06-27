@@ -1,0 +1,9 @@
+---
+- name: Install a Mesos Cluster
+  hosts: mesos-master
+  remote_user: root
+
+  roles:
+    - common
+    - zookeeper
+    - master

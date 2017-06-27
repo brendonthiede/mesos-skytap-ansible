@@ -1,0 +1,21 @@
+---
+- name: Install zookeeper packages
+  yum: name={{ item }} state=installed
+  with_items:
+   - mesosphere-zookeeper
+
+- name: Configure zookpeer server ID
+  template:
+     src: myid.j2
+     dest: /var/lib/zookeeper/myid
+
+- name: Copy zookeeper config
+  copy:
+     src: zoo.cfg
+     dest: /etc/zookeeper/conf/zoo.cfg
+
+- name: Start zookeeper service
+  service:
+     name: zookeeper
+     state: started
+     enabled: yes

@@ -1,0 +1,67 @@
+---
+- name: Set hostname value
+  hostname:
+     name: "sir-demo-{{ hostName }}.demo.plm.vertafore.com"
+
+- name: Copy hosts file
+  copy:
+     src: hosts
+     dest: /etc/
+
+- name: Set up public key
+  template:
+     src: id_rsa.pub.j2
+     dest: /root/.ssh/id_rsa.pub
+
+- name: Set up private key
+  template:
+     src: id_rsa.j2
+     dest: /root/.ssh/id_rsa
+     mode: 0600
+
+- name: Set up authorized keys
+  template:
+     src: authorized_keys.j2
+     dest: /root/.ssh/authorized_keys
+     mode: 0600
+
+- name: Copy proxy config
+  copy:
+     src: proxy.sh
+     dest: /etc/profile.d/
+  notify: "reload proxy.sh"
+
+- name: Copy yum config
+  copy:
+     src: yum.conf
+     dest: /etc/
+
+- name: Copy libevent-devel RPM file to server
+  copy:
+     src: libevent-devel-2.0.21-4.el7.x86_64.rpm
+     dest: /tmp/libevent-devel-2.0.21-4.el7.x86_64.rpm
+
+- name: Install libevent-devel
+  yum:
+     name: /tmp/libevent-devel-2.0.21-4.el7.x86_64.rpm
+     state: present
+
+- name: Copy mesosphere repo RPM file to server
+  copy:
+     src: mesosphere-el-repo-7-1.noarch.rpm
+     dest: /tmp/mesosphere-el-repo-7-1.noarch.rpm
+
+- name: Install mesosphere repo
+  yum:
+     name: /tmp/mesosphere-el-repo-7-1.noarch.rpm
+     state: present
+
+- name: Install mesos
+  yum:
+     name: mesos
+     state: installed
+
+- name: Copy mesos zookeeper config
+  copy:
+     src: zk
+     dest: /etc/mesos/zk

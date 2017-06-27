@@ -1,0 +1,35 @@
+---
+- name: Install marathon
+  yum:
+     name: marathon
+     state: installed
+
+- name: Configure mesos hostname
+  template:
+     src: hostname.j2
+     dest: /etc/mesos-master/hostname
+  notify: "restart master services"
+
+- name: Configure mesos quorum
+  copy:
+     src: quorum
+     dest: /etc/mesos-master/quorum
+  notify: "restart master services"
+
+- name: Start mesos-master service
+  service:
+     name: mesos-master
+     state: started
+     enabled: yes
+
+- name: Stop mesos-slave service
+  service:
+     name: mesos-slave
+     state: stopped
+     enabled: no
+
+- name: Start marathon service
+  service:
+     name: marathon
+     state: started
+     enabled: yes

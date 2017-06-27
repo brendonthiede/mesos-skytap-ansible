@@ -1,0 +1,7 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.0.8.1    sir-demo-mesosmaster01.demo.plm.vertafore.com sir-demo-mesosmaster01 master01
+10.0.8.2    sir-demo-mesosmaster02.demo.plm.vertafore.com sir-demo-mesosmaster02 master02
+10.0.8.3    sir-demo-mesosmaster03.demo.plm.vertafore.com sir-demo-mesosmaster03 master03
+10.0.8.4    sir-demo-mesosslave01.demo.plm.vertafore.com sir-demo-mesosslave01 slave01
+10.0.8.5    sir-demo-mesosslave02.demo.plm.vertafore.com sir-demo-mesosslave02 slave02

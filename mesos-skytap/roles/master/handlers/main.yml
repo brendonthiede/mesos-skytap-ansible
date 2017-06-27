@@ -1,0 +1,11 @@
+---
+- name: restart mesos-master
+  service:
+     name: mesos-master
+     state: restarted
+  listen: restart master services
+- name: restart marathon
+  service:
+     name: marathon
+     state: restarted
+  listen: restart master services
