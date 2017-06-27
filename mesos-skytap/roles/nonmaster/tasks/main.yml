@@ -1,0 +1,6 @@
+---
+- name: Stop mesos-master service
+  service:
+     name: mesos-master
+     state: stopped
+     enabled: no

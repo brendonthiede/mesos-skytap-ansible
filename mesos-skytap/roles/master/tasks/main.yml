@@ -22,12 +22,6 @@
      state: started
      enabled: yes
 
-- name: Stop mesos-slave service
-  service:
-     name: mesos-slave
-     state: stopped
-     enabled: no
-
 - name: Start marathon service
   service:
      name: marathon
