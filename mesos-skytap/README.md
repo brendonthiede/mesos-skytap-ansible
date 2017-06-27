@@ -8,8 +8,7 @@
 
 ### Configuration
 
-You need to update the configuration in `group_vars/all` such as setting the database username
-and password.
+You need to copy the server config from `common/files/hosts` to your `etc/hosts`
 
 #### Generating and Storing Secrets
 

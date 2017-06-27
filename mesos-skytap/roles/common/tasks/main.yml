@@ -1,7 +1,7 @@
 ---
 - name: Set hostname value
   hostname:
-     name: "sir-demo-{{ hostName }}.demo.plm.vertafore.com"
+     name: "{{ hostName }}"
 
 - name: Copy hosts file
   copy:

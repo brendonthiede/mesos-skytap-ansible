@@ -1,1 +1,1 @@
-zk://10.0.8.1:2181,10.0.8.2:2181,10.0.8.3:2181/mesos
+zk://sir-demo-mesosmaster01.demo.plm.vertafore.com:2181,sir-demo-mesosmaster02.demo.plm.vertafore.com:2181,sir-demo-mesosmaster03.demo.plm.vertafore.com:2181/mesos

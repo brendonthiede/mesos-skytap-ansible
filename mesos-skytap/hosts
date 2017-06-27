@@ -1,8 +1,8 @@
 [mesos-master]
-master01 ansible_user=root ansible_port=22 ansible_host=172.19.0.176 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=master01 natIP=172.19.0.176 skytapIP=10.0.8.1 serverID=1
-master02 ansible_user=root ansible_port=22 ansible_host=172.19.5.95 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=master02 natIP=172.19.5.95 skytapIP=10.0.8.2 serverID=2
-master03 ansible_user=root ansible_port=22 ansible_host=172.19.5.96 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=master03 natIP=172.19.5.96 skytapIP=10.0.8.3 serverID=3
+master01 ansible_user=root ansible_port=22 ansible_host=172.19.0.176 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=sir-demo-mesosmaster01.demo.plm.vertafore.com serverID=1
+master02 ansible_user=root ansible_port=22 ansible_host=172.19.5.95 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=sir-demo-mesosmaster02.demo.plm.vertafore.com serverID=2
+master03 ansible_user=root ansible_port=22 ansible_host=172.19.5.96 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=sir-demo-mesosmaster03.demo.plm.vertafore.com serverID=3
 
 [mesos-slave]
-slave01 ansible_user=root ansible_port=22 ansible_host=172.19.5.97 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=slave01 natIP=172.19.5.97 skytapIP=10.0.8.4
-slave02 ansible_user=root ansible_port=22 ansible_host=172.19.5.98 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=slave02 natIP=172.19.5.98 skytapIP=10.0.8.5
+slave01 ansible_user=root ansible_port=22 ansible_host=172.19.5.97 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=sir-demo-mesosslave01.demo.plm.vertafore.com
+slave02 ansible_user=root ansible_port=22 ansible_host=172.19.5.98 ansible_ssh_private_key_file=~/.ssh/id_rsa_demo hostName=sir-demo-mesosslave02.demo.plm.vertafore.com
