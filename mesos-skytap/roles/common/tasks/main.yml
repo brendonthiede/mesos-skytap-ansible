@@ -88,3 +88,8 @@
   copy:
      src: zk
      dest: /etc/mesos/zk
+
+- name: Install git
+  yum:
+     name: git
+     state: installed

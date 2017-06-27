@@ -27,3 +27,14 @@
      name: marathon
      state: started
      enabled: yes
+
+- name: Install haproxy with lua
+  yum: name={{ item }} state=installed
+  with_items:
+    - lua
+    - haproxy
+
+- name: Install marathon-lb
+  git:
+    repo: 'git clone https://github.com/mesosphere/marathon-lb.git'
+    dest: /opt
