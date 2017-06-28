@@ -1,0 +1,8 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.0.9.6    sir-dcos-bootstrap01.dcos.plm.vertafore.com sir-dcos-bootstrap01 bootstrap01
+10.0.9.5    sir-dcos-master01.dcos.plm.vertafore.com sir-dcos-master01 master01
+10.0.9.4    sir-dcos-master02.dcos.plm.vertafore.com sir-dcos-master02 master02
+10.0.9.3    sir-dcos-master03.dcos.plm.vertafore.com sir-dcos-master03 master03
+10.0.9.1    sir-dcos-agent01.dcos.plm.vertafore.com sir-dcos-agent01 agent01
+10.0.9.2    sir-dcos-agent02.dcos.plm.vertafore.com sir-dcos-agent02 agent02

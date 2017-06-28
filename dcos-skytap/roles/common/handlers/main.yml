@@ -1,0 +1,8 @@
+---
+- name: reload proxy.sh
+  shell: "source /etc/profile.d/proxy.sh"
+
+- name: restart docker
+  service:
+     name: docker
+     state: restarted
